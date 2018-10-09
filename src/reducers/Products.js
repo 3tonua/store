@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import {SET_PRODUCTS, ADD_PRODUCT_OPEN_MODAL} from "../constants";
+import {SET_PRODUCTS} from "../constants";
 
 function products(state = [], action) {
     switch (action.type) {
@@ -11,17 +11,6 @@ function products(state = [], action) {
     return state;
 }
 
-function openModal(state = false, action) {
-    switch (action.type) {
-        case ADD_PRODUCT_OPEN_MODAL: {
-            state = action.payload;
-            break;
-        }
-    }
-    return state;
-}
-
 export default combineReducers({
     products,
-    openModal,
 })
