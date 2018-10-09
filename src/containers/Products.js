@@ -6,7 +6,6 @@ import {fetchProducts, addProduct} from "../actions/products";
 
 const mapStateToProps = state => ({
     products: state.products.products,
-    openModal: state.products.openModal,
     isAdmin: state.currentUser.currentUser === 'admin',
 });
 
