@@ -5,7 +5,7 @@ import {initProducts} from "../constants/products";
 export const fetchProducts = () => dispatch => {
     let products = [];
     products = JSON.parse(localStorage.getItem('products'));
-    if (products && products.length === 0) {
+    if (!products || (products && products.length === 0)) {
         products = initProducts;
         localStorage.setItem("products", JSON.stringify(products));
     }
